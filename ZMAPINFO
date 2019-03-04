@@ -1,0 +1,10 @@
+GameInfo {}
+
+cluster 1 { hub }
+
+map MAP01 lookup "map01" {
+	sky1 = "SKY1", 0
+	cluster = 1
+}
+
+DoomEdNums {}
