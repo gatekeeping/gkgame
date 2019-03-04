@@ -1,4 +1,6 @@
-GameInfo {}
+GameInfo {
+	PlayerClasses = "GKPlayer"
+}
 
 cluster 1 { hub }
 
