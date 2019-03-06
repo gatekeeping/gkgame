@@ -5,10 +5,8 @@ class Bow : Weapon {
 		Weapon.AmmoUse 1;
 		Weapon.AmmoGive 10;
 		Weapon.AmmoType "ArrowAmmo";
-		+Weapon.NoAlert;
+		Weapon.SlotNumber 1;
 	}
-
-	double originalSpeed;
 
 	states {
 		Select:
@@ -24,9 +22,7 @@ class Bow : Weapon {
 			BWPU A -1;
 			Stop;
 		Fire:
-			TNT1 A 0 {
-				self.GiveInventory("AimState", 1);
-			}
+			TNT1 A 0 GiveInventory("StopMoveState", 1);
 			DBOW B 6 A_PlayWeaponSound("bow/ready");
 			DBOW C 6;
 			Goto Hold;
@@ -35,30 +31,11 @@ class Bow : Weapon {
 			TNT1 A 0 A_Refire;
 			TNT1 A 0 {
 				A_FireCustomMissile("ArrowProj", 0, 1, 5, 0);
-				self.TakeInventory("AimState", 1);
+				self.TakeInventory("StopMoveState", 1);
 				A_PlayWeaponSound("bow/arrow");
 			}
-			DBOW E 3;
-			DBOW FBA 3;
+			DBOW EFBA 3;
 			Goto Ready;
-	}
-}
-
-class AimState : Inventory {
-	default {
-		Inventory.MaxAmount 1;
-	}
-	private double originalSpeed;
-	override void AttachToOwner(Actor user) {
-		originalSpeed = user.speed;
-		super.AttachToOwner(user);
-	}
-	override void DoEffect() {
-		owner.speed = 0;
-	}
-	override void DetachFromOwner() {
-		owner.speed = originalSpeed;
-		super.DetachFromOwner();
 	}
 }
 
