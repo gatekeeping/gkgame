@@ -7,6 +7,9 @@ class Bow : Weapon {
 		Weapon.AmmoType "ArrowAmmo";
 		+Weapon.NoAlert;
 	}
+
+	double originalSpeed;
+
 	states {
 		Select:
 			DBOW A 1 A_Raise;
@@ -21,17 +24,41 @@ class Bow : Weapon {
 			BWPU A -1;
 			Stop;
 		Fire:
+			TNT1 A 0 {
+				self.GiveInventory("AimState", 1);
+			}
 			DBOW B 6 A_PlayWeaponSound("bow/ready");
 			DBOW C 6;
 			Goto Hold;
 		Hold:
 			DBOW D 5;
 			TNT1 A 0 A_Refire;
-			TNT1 A 0 A_FireCustomMissile("ArrowProj", 0, 1, 5, 0);
-			TNT1 A 0 A_PlayWeaponSound("bow/arrow");
+			TNT1 A 0 {
+				A_FireCustomMissile("ArrowProj", 0, 1, 5, 0);
+				self.TakeInventory("AimState", 1);
+				A_PlayWeaponSound("bow/arrow");
+			}
 			DBOW E 3;
 			DBOW FBA 3;
 			Goto Ready;
+	}
+}
+
+class AimState : Inventory {
+	default {
+		Inventory.MaxAmount 1;
+	}
+	private double originalSpeed;
+	override void AttachToOwner(Actor user) {
+		originalSpeed = user.speed;
+		super.AttachToOwner(user);
+	}
+	override void DoEffect() {
+		owner.speed = 0;
+	}
+	override void DetachFromOwner() {
+		owner.speed = originalSpeed;
+		super.DetachFromOwner();
 	}
 }
 
@@ -46,7 +73,7 @@ class ArrowProj : Actor {
 		+DONTREFLECT;
 		+RIPPER;
 		Obituary "%o was perforated by one of %k's arrows";
-		Scale 0.8;
+		Scale 2;
 	}
 	states {
 		Spawn:
