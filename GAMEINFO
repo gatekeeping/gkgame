@@ -1,0 +1,3 @@
+IWAD = "HEXEN.WAD"
+LOAD = "gklib"
+STARTUPTITLE = "GateKeep Demo"
