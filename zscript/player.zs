@@ -5,7 +5,7 @@ class GKPlayer : PlayerPawn {
 		Player.StartItem "Bow";
 		Player.StartItem "Hatchet";
 		Player.StartItem "Pole";
-		Player.StartItem "ArrowAmmo", 25;
+		Player.StartItem "ArrowAmmo", 5;
 	}
 }
 

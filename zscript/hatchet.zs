@@ -28,7 +28,7 @@ class Hatchet : Weapon {
 			TNT1 A 8;
 			AXEG H 2 A_PlaySound("hatchet/swing", CHAN_WEAPON);
 			AXEG I 2;
-			AXEG J 2 A_CustomPunch(20+random(4, 16), 1, 0);
+			AXEG J 2 A_CustomPunch(175, 1, 0);
 			AXEG K 2;
 			TNT1 A 8 TakeInventory("StopMoveState", 1);
 			AXEG EDCB 2;

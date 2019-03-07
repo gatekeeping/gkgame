@@ -22,10 +22,12 @@ class Pole : Weapon {
 		Fire:
 			TNT1 A 0 GiveInventory("StopMoveState", 1);
 			STFF D 4;
-			TNT1 A 4;
+			TNT1 A 12;
+			Goto Hold;
+		Hold:
 			STFF D 3 A_PlaySound("hatchet/swing", CHAN_WEAPON);
 			STFF B 3;
-			STFF C 3 A_CustomPunch(20+random(4, 16), 1, 0, "", 96);
+			STFF C 3 A_CustomPunch(75, 1, 0, "", 96);
 			STFF B 3 A_ReFire;
 			TNT1 A 0 TakeInventory("StopMoveState", 1);
 			Goto Ready;
