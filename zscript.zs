@@ -1,6 +1,12 @@
 version "3.8"
 
-#include "zscript/player.zs"
-#include "zscript/bow.zs"
-#include "zscript/hatchet.zs"
-#include "zscript/pole.zs"
+#include "zscript/states/stopmove.zs"
+
+#include "zscript/player/player.zs"
+
+#include "zscript/weapon/bow.zs"
+#include "zscript/weapon/hatchet.zs"
+#include "zscript/weapon/pole.zs"
+
+#include "zscript/items/gems/general.zs"
+#include "zscript/items/gems/fire.zs"
