@@ -104,14 +104,14 @@ class WindGemActive : Actor {
 			TNT1 A 0 A_SpawnItemEx("GemTornadoTinyLauncherA",0,0,-5);
 			TNT1 A 0 A_AlertMonsters;
 			TNT1 A 0 A_SpawnItemEx("GemTornado",0,0,-21);
-			TNT1 A 0 A_PlaySound("TRNWND",5,1.6,1);
+			TNT1 A 0 A_PlaySound("gem/wind",5,1.6,1);
 			TNT1 A 0 A_RadiusThrust(-450,280,2);
 			WIGM A 4;
 			TNT1 A 0 A_CountDown;
 			Goto Spawn+2;
 		Death:
 			TNT1 A 0;
-			TNT1 A 0 A_PlaySound("GEMBRK",5,2,0);
+			TNT1 A 0 A_PlaySound("gem/break",5,2,0);
 			TNT1 AAAAAA 0 A_SpawnItemEx("GemShardGreen",0,0,3,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
 			Stop;
 	}
@@ -165,7 +165,7 @@ class GemTornadoSeeker : Actor {
 		Spawn:   
 			SWTR ABABAB 1;
 			SWTR AB 1 A_SeekerMissile(8,20,SMF_LOOK,256|SMF_PRECISE);
-			TNT1 A 0 A_PlaySound("TRNWND",5,0.6,1);
+			TNT1 A 0 A_PlaySound("gem/wind",5,0.6,1);
 			TNT1 A 0 A_RadiusThrust(-120,60,2);
 			TNT1 A 0 A_CountDown;
 			Goto Spawn+6;

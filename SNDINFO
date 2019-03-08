@@ -18,3 +18,7 @@ gem/flame1 FGEMF1
 gem/flame2 FGEMF2
 gem/flame3 FGEMF3
 $random gem/flame { gem/flame1 gem/flame2 gem/flame3 }
+
+gem/wind TRNWND
+
+gem/water WATDRP

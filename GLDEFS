@@ -67,3 +67,60 @@ object EarthGemActive {
 		light SmallBrownPulse
 	}
 }
+
+
+
+
+
+pulselight SmallGreenPulse {
+	color 0.0 0.7 0.0
+	size 196
+	secondarySize 56
+	interval 5
+	offset 0 32 0
+}
+
+object WindGemSet {
+	frame WIGM {
+		light SmallGreenPulse
+	}
+}
+
+object WindGemPrepare {
+	frame WIGM {
+		light SmallGreenPulse
+	}
+}
+
+object WindGemActive {
+	frame WIGM {
+		light SmallGreenPulse
+	}
+}
+
+
+pulseLight SmallBluePulse {
+	color 0.0 0.0 0.7
+	size 196
+	secondarySize 56
+	interval 5
+	offset 0 32 0
+}
+
+object WaterGemSet {
+	frame WAGM {
+		light SmallBluePulse;
+	}
+}
+
+object WaterGemPrepare {
+	frame WAGM {
+		light SmallBluePulse;
+	}
+}
+
+object WaterGemActive {
+	frame WAGM {
+		light SmallBluePulse;
+	}
+}
