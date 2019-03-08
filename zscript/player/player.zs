@@ -6,6 +6,7 @@ class GKPlayer : PlayerPawn {
 		Player.StartItem "Hatchet";
 		Player.StartItem "Pole";
 		Player.StartItem "ArrowAmmo", 99;
-		Player.StartItem "FireGem", 5;
+		Player.StartItem "FireGem", 99;
+		Player.StartItem "EarthGem", 99;
 	}
 }

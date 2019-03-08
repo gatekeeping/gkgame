@@ -2,7 +2,8 @@
 class FireGem : Inventory {
 	default {
 		Inventory.Amount 1;
-		Inventory.MaxAmount 5;
+		Inventory.MaxAmount 99;
+		Inventory.PickupSound "gem/get";
 		Inventory.PickupMessage "Fire Gem";
 		Inventory.Icon "IFGMA0";
 		Tag "Fire Gem";
@@ -19,7 +20,6 @@ class FireGem : Inventory {
 	}
 
 	override bool use (bool pickup) {
-		console.printf("Using");
 		owner.A_ThrowGrenade("FireGemSet", 2, 8, 3, 0);
 		return true;
 	}
@@ -41,6 +41,7 @@ class FireGemSet : Actor {
 		BounceCount 4;
 		WallBounceFactor 1.5;
 		BounceFactor 0.25;
+		BounceSound "gem/bounce";
 	}
 
 	states {
@@ -109,7 +110,7 @@ class FireGemActive : Actor {
 			Loop;
 		Death:
 			TNT1 A 0;
-			TNT1 A 0 A_PlaySound("GEMBRK",5,2,0);
+			TNT1 A 0 A_PlaySound("gem/break", 5, 2, 0);
 			TNT1 AAAAAA 0 A_SpawnItemEx("GemShardRed",0,0,3,random(-2,2),random(-2,2),random(3,9),random(0,359),32);
 			Stop;
 	}
@@ -232,7 +233,7 @@ class FireGemFlame : Actor {
 		+RANDOMIZE;
 		+DONTBLAST;
 		+BRIGHT;
-		DeathSound "FlameErupt";
+		DeathSound "gem/flame";
 	}
 
 	states {
@@ -241,7 +242,7 @@ class FireGemFlame : Actor {
 			TNT1 A 0 A_Jump(255,"Normal","Small");
 			Loop;
 		Normal:
-			TNT1 A 0 A_PlaySound("FlameErupt",5,2,0);
+			TNT1 A 0 A_PlaySound("gem/flame",5,2,0);
 			FFIR A 1;
 			TNT1 A 0 A_SpawnItem("FlameGemFDMG",0,25,0);
 			FFIR B 1;
@@ -260,7 +261,7 @@ class FireGemFlame : Actor {
 			TNT1 A 0 A_SpawnItem("FlameGemFDMG",0,25,0);
 		Small:
 			TNT1 A 0 A_SetScale(0.4);
-			TNT1 A 0 A_PlaySound("FlameErupt",5,2,0);
+			TNT1 A 0 A_PlaySound("gem/flame",5,2,0);
 			FFIR A 1;
 			TNT1 A 0 A_SpawnItem("FlameGemFDMG",0,20,0);
 			FFIR B 1;

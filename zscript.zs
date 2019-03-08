@@ -10,3 +10,4 @@ version "3.8"
 
 #include "zscript/items/gems/general.zs"
 #include "zscript/items/gems/fire.zs"
+#include "zscript/items/gems/earth.zs"
