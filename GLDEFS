@@ -1,7 +1,7 @@
 
 pulselight SmallRedPulse {
 	color 1.0 0.0 0.0
-	size 196
+	size 96
 	secondarySize 56
 	interval 5
 	offset 0 32 0
@@ -44,7 +44,7 @@ object FireGemFlame {
 
 pulselight SmallBrownPulse {
 	color 0.4 0.2 0.0
-	size 196
+	size 96
 	secondarySize 56
 	interval 5
 	offset 0 32 0
@@ -74,7 +74,7 @@ object EarthGemActive {
 
 pulselight SmallGreenPulse {
 	color 0.0 0.7 0.0
-	size 196
+	size 96
 	secondarySize 56
 	interval 5
 	offset 0 32 0
@@ -103,7 +103,7 @@ object WindGemActive {
 
 pulseLight SmallBluePulse {
 	color 0.0 0.0 0.7
-	size 196
+	size 96
 	secondarySize 56
 	interval 5
 	offset 0 32 0
@@ -133,7 +133,7 @@ object WaterGemActive {
 
 pulseLight SmallPurplePulse {
 	color 0.5 0.0 1.0
-	size 196
+	size 96
 	secondarySize 56
 	interval 5
 	offset 0 32 0
@@ -163,7 +163,7 @@ object PoisonGemActive {
 
 pulseLight SmallYellowPulse {
 	color 1.0 1.0 0.0
-	size 196
+	size 96
 	secondarySize 56
 	interval 5
 	offset 0 32 0
@@ -214,5 +214,182 @@ object GemLightningBoltVar2 {
 object GemLightningBoltVar3 {
 	frame GBLT {
 		light SmallYellowPoint
+	}
+}
+
+
+
+
+
+pulseLight SmallLightBluePulse {
+	color 0.0 0.8 1.0
+	size 96
+	secondarySize 56
+	interval 5
+	offset 0 32 0
+}
+
+object IceGemSet {
+	frame IGEM {
+		light SmallLightBluePulse
+	}
+}
+
+object IceGemPrepare {
+	frame IGEM {
+		light SmallLightBluePulse
+	}
+}
+
+object IceGemActive {
+	frame IGEM {
+		light SmallLightBluePulse
+	}
+}
+
+
+pulseLight SmallDarkLightPulse {
+	color 0.7 0.7 0.7
+	size 96
+	subtractive 1
+	secondarySize 56
+	interval 2
+	offset 0 32 0
+}
+
+pulseLight BlueExplosion {
+	color 0.0 0.3 0.8
+	size 96
+	secondarySize 80
+	interval 2
+	offset 0 0 0
+}
+
+pulseLight PurpleExplosion {
+	color 0.5 0.0 1.0
+	size 96
+	secondarySize 80
+	interval 2
+	offset 0 0 0
+}
+
+object DarkGemSet {
+	frame DGEM {
+		light SmallDarkLightPulse
+	}
+}
+
+object DarkGemPrepare {
+	frame DGEM {
+		light SmallDarkLightPulse
+	}
+}
+
+object DarkGemActive {
+	frame DGEM {
+		light SmallDarkLightPulse
+	}
+}
+
+object DarkVortexProjRise {
+	frame DVRT {
+		light SmallDarkLightPulse
+	}
+}
+
+object DarkVortexProj {
+	frame DVRT {
+		light SmallDarkLightPulse
+	}
+}
+
+object DarkVortexProjDrop {
+	frame DVRT {
+		light SmallDarkLightPulse
+	}
+}
+
+object DarkVortexNova {
+	frame DVRT {
+		light SmallDarkLightPulse
+	}
+}
+
+
+object DarkVortexNova {
+	frame BVDP {
+		light BlueExplosion
+	}
+}
+
+object DarkVortexProjSmall {
+	frame BVDP {
+		light BlueExplosion
+	}
+	frame DVRS {
+		light SmallDarkLightPulse
+	}
+}
+
+object GemDarkOrb {
+	frame BVOD {
+		light SmallDarkLightPulse
+	}
+}
+
+object DarkEnergyBolt {
+	frame DNRG {
+		light PurpleExplosion
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pulseLight BlueCandle {
+	color 0.0 0.0 0.8
+	size 32
+	secondarySize 24
+	interval 1
+	offset 0 0 0
+}
+
+object ZBlueCandle {
+	frame BCAN {
+		light BlueCandle
+	}
+}
+
+
+
+
+
+pulseLight Torch {
+	color 1.0 0.4 0.0
+	size 64
+	secondarySize 56
+	interval 1
+	offset 0 0 0
+}
+
+object BrassTorch {
+	frame BRTR {
+		light Torch
 	}
 }

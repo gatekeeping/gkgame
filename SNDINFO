@@ -29,3 +29,10 @@ gem/poison/puddle POSPUDL
 gem/poison/mist POIMIST
 
 gem/lightning/strike LSTRIKE
+
+gem/ice/shard ICESHRD
+gem/ice/impact ICEIMPCT
+
+gem/dark/vortex DRKVORTX
+gem/dark/hit VOIDHIT
+gem/dark/orb DRKMVRTX

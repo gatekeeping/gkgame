@@ -12,5 +12,7 @@ class GKPlayer : PlayerPawn {
 		Player.StartItem "WaterGem", 99;
 		Player.StartItem "PoisonGem", 99;
 		Player.StartItem "LightningGem", 99;
+		Player.StartItem "IceGem", 99;
+		Player.StartItem "DarkGem", 99;
 	}
 }
