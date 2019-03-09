@@ -36,3 +36,6 @@ gem/ice/impact ICEIMPCT
 gem/dark/vortex DRKVORTX
 gem/dark/hit VOIDHIT
 gem/dark/orb DRKMVRTX
+
+gem/light/active GLGHTIM
+gem/light/ray GLIGHTD
