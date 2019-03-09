@@ -99,6 +99,8 @@ object WindGemActive {
 }
 
 
+
+
 pulseLight SmallBluePulse {
 	color 0.0 0.0 0.7
 	size 196
@@ -122,5 +124,95 @@ object WaterGemPrepare {
 object WaterGemActive {
 	frame WAGM {
 		light SmallBluePulse;
+	}
+}
+
+
+
+
+
+pulseLight SmallPurplePulse {
+	color 0.5 0.0 1.0
+	size 196
+	secondarySize 56
+	interval 5
+	offset 0 32 0
+}
+
+object PoisonGemSet {
+	frame POGM {
+		light SmallPurplePulse
+	}
+}
+
+object PoisonGemPrepare {
+	frame POGM {
+		light SmallPurplePulse
+	}
+}
+
+object PoisonGemActive {
+	frame POGM {
+		light SmallPurplePulse
+	}
+}
+
+
+
+
+
+pulseLight SmallYellowPulse {
+	color 1.0 1.0 0.0
+	size 196
+	secondarySize 56
+	interval 5
+	offset 0 32 0
+}
+
+pointLight SmallYellowPoint {
+	color 1.0 1.0 0.0
+	size 48
+	offset 0 16 0
+}
+
+object LightningGemSet {
+	frame LGEM {
+		light SmallYellowPulse
+	}
+}
+
+object LightningGemPrepare {
+	frame LGEM {
+		light SmallYellowPulse
+	}
+}
+
+object LightningGemActive {
+	frame LGEM {
+		light SmallYellowPulse
+	}
+}
+
+object LitBolt {
+	frame GRLT {
+		light SmallYellowPoint
+	}
+}
+
+object GemLightningBoltVar1 {
+	frame GBLT {
+		light SmallYellowPoint
+	}
+}
+
+object GemLightningBoltVar2 {
+	frame GBLT {
+		light SmallYellowPoint
+	}
+}
+
+object GemLightningBoltVar3 {
+	frame GBLT {
+		light SmallYellowPoint
 	}
 }

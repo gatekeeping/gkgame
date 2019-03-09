@@ -22,3 +22,10 @@ $random gem/flame { gem/flame1 gem/flame2 gem/flame3 }
 gem/wind TRNWND
 
 gem/water WATDRP
+
+gem/poison/puff POSPUFF
+gem/poison/burst POIBURST
+gem/poison/puddle POSPUDL
+gem/poison/mist POIMIST
+
+gem/lightning/strike LSTRIKE
