@@ -1,5 +1,13 @@
 
 class GKPlayer : PlayerPawn {
+
+	private int strength;
+	private int dexterity;
+	private int intelligence;
+
+	private Array<String> memorizedSpells;
+	private String currentSpell;
+
 	default {
 		Player.DisplayName "Gatekeeper";
 		Player.StartItem "Fists";
@@ -17,5 +25,9 @@ class GKPlayer : PlayerPawn {
 		Player.StartItem "IceGem", 99;
 		Player.StartItem "DarkGem", 99;
 		Player.StartItem "LightGem", 99;
+	}
+
+	StateLabel getCurrentSpell() {
+		return "FireSpell";
 	}
 }

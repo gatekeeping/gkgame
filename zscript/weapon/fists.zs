@@ -1,5 +1,5 @@
 
-class Fists : Weapon {
+class Fists : GKWeapon {
 
 	default {
 		+BLOODSPLATTER;

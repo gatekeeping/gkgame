@@ -1,5 +1,5 @@
 
-class Battleaxe : Weapon {
+class Battleaxe : GKWeapon {
 
 	default {
 		Weapon.SlotNumber 1;

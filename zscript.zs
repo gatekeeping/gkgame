@@ -4,6 +4,7 @@ version "3.8"
 
 #include "zscript/player/player.zs"
 
+#include "zscript/weapon/base.zs"
 #include "zscript/weapon/bow.zs"
 #include "zscript/weapon/hatchet.zs"
 #include "zscript/weapon/pole.zs"

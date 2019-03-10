@@ -1,5 +1,5 @@
 
-class Hatchet : Weapon {
+class Hatchet : GKWeapon {
 	default {
 		+Weapon.MeleeWeapon;
 		+Weapon.NoAlert;

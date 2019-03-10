@@ -1,5 +1,5 @@
 
-class Pole : Weapon {
+class Pole : GKWeapon {
 
 	default {
 		+Weapon.MELEEWEAPON;

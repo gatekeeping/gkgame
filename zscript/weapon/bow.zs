@@ -1,5 +1,5 @@
 
-class Bow : Weapon {
+class Bow : GKWeapon {
 	default {
 		Inventory.PickUpMessage "Bow";
 		Weapon.AmmoUse 1;
