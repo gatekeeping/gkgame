@@ -102,9 +102,9 @@ class FireGemActive : Actor {
 		Spawn:  
 			TNT1 A 0 A_AlertMonsters;
 			FGEM A 1;
-			TNT1 A 0 A_CustomMissile("GemFlameSpawnerNear", 0, 0, random(0,360), CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("GemFlameSpawnerFar", 0, 0, random(0,360), CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("GemFlameSpawnerFurthest", 0, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemFlameSpawnerNear", 0, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemFlameSpawnerFar", 0, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemFlameSpawnerFurthest", 0, 0, random(0,360), CMF_AIMDIRECTION);
 			FGEM A 5;
 			TNT1 A 0 A_CountDown;
 			Loop;

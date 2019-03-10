@@ -107,7 +107,7 @@ class LightGemActive : Actor {
 			TNT1 A 0 A_PlaySound("gem/light/active",5,0.8,0);
 			LIGM A 2;
 			TNT1 A 0 A_SpawnItemEx("GemLightBurstFX",3,0,6);
-			TNT1 AAAAA 0 A_CustomMissile("LightRayStartup", 0, 0, random(0,360), CMF_AIMDIRECTION,random(0,5));
+			TNT1 AAAAA 0 A_SpawnProjectile("LightRayStartup", 0, 0, random(0,360), CMF_AIMDIRECTION,random(0,5));
 			LIGM A 3;
 			TNT1 A 0 A_CountDown;
 			Goto Spawn+4;
@@ -144,7 +144,7 @@ class LightRayStartup : Actor {
 			TNT1 A 0;
 			TNT1 A 0 A_SpawnItem("GemLightBurstShockwave",0,0,0,0);
 			TNT1 A 0 A_PlaySound("gem/light/active",5,0.2,0);
-			TNT1 A 0 A_CustomMissile("GemLightRayProj", 0, 0, 0, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemLightRayProj", 0, 0, 0, CMF_AIMDIRECTION);
 			TNT1 A 0 A_SetScale(0.3);
 			TNT1 A 0 A_SetTranslucent(0.6);
 			TRPF AABCDE 1 Bright;
@@ -210,7 +210,7 @@ class LightRayLaunched : FastProjectile {
 			TNT1 A 0 A_Jump(150,"LightBeam");
 			Loop     ;
 		LightBeam:
-			TNT1 AA 0 A_CustomMissile("GemLightRayProjExtra", 0, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 AA 0 A_SpawnProjectile("GemLightRayProjExtra", 0, 0, random(0,360), CMF_AIMDIRECTION);
 			Stop;
 		Death:
 			TNT1 A 0;

@@ -137,7 +137,7 @@ class GemTornado : Actor {
 			TNT1 A 0 A_Jump(55,"SmallTornadoShot");
 			Stop;
 		SmallTornadoShot:
-			TNT1 A 0 A_CustomMissile("GemTornadoSeeker", 45, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemTornadoSeeker", 45, 0, random(0,360), CMF_AIMDIRECTION);
 			Stop;
 		Death:
 			TNT1 A 0;
@@ -193,14 +193,14 @@ class GemTornadoTinyLauncherA : Actor {
 	states {
 		Spawn:   
 			TNT1 A 30;
-			TNT1 A 0 A_CustomMissile("GemTornadoTinyLauncherB",-5,0,0, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("GemTornadoTinyLauncherB",-5,0,45, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("GemTornadoTinyLauncherB",-5,0,90, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("GemTornadoTinyLauncherB",-5,0,135, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("GemTornadoTinyLauncherB",-5,0,180, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("GemTornadoTinyLauncherB",-5,0,225, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("GemTornadoTinyLauncherB",-5,0,270, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("GemTornadoTinyLauncherB",-5,0,315, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemTornadoTinyLauncherB",-5,0,0, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemTornadoTinyLauncherB",-5,0,45, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemTornadoTinyLauncherB",-5,0,90, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemTornadoTinyLauncherB",-5,0,135, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemTornadoTinyLauncherB",-5,0,180, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemTornadoTinyLauncherB",-5,0,225, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemTornadoTinyLauncherB",-5,0,270, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("GemTornadoTinyLauncherB",-5,0,315, CMF_AIMDIRECTION);
 			TNT1 A 0 A_CountDown;
 			Loop;
 		Death:

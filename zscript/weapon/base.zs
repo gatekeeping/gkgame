@@ -14,7 +14,7 @@ class GKWeapon : Weapon {
 
 		FireSpell:
 			TNT1 A 0 {
-				A_CustomMissile("GemFlameSpawnerNear", 0, 0, random(0,360), CMF_AIMDIRECTION);
+				A_SpawnProjectile("GemFlameSpawnerNear", 0, 0, random(0,360), CMF_AIMDIRECTION);
 				return ResolveState("Ready");
 			}
 	}

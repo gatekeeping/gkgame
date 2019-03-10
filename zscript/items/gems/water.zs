@@ -104,11 +104,11 @@ class WaterGemActive : Actor {
 	states {
    		Spawn:
 			TNT1 A 0 A_AlertMonsters;
-			TNT1 A 0 A_CustomMissile("WaterDropSpawnerNear", 0, 0, random(0,360), CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("WaterDropSpawnerFar", 0, 0, random(0,360), CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("RainFXSpawnerA", 0, 0, random(0,360), CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("RainFXSpawnerB", 0, 0, random(0,360), CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("RainFXSpawnerC", 0, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("WaterDropSpawnerNear", 0, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("WaterDropSpawnerFar", 0, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("RainFXSpawnerA", 0, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("RainFXSpawnerB", 0, 0, random(0,360), CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("RainFXSpawnerC", 0, 0, random(0,360), CMF_AIMDIRECTION);
 			WAGM A 12;
 			TNT1 A 0 A_CountDown;
 			Loop;

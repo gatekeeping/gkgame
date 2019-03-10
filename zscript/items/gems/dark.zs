@@ -134,17 +134,17 @@ class DarkVortexProjRise : Actor {
 	states {
 		Spawn: 
 			DVRT ABC 2 ThrustThingZ(0,8,0,0);
-			TNT1 AA 0 A_CustomMissile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
+			TNT1 AA 0 A_SpawnProjectile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
 			TNT1 A 0 A_Explode(6,75,0,1,75);
 			TNT1 A 0 A_RadiusThrust(-500,60,2);
 			TNT1 A 0 A_PlaySound("gem/dark/vortex",5,2,1);
 			TNT1 A 0 A_Explode(6,75,0,1,75);
 			TNT1 A 0 A_RadiusThrust(-500,60,2);
-			TNT1 AA 0 A_CustomMissile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
+			TNT1 AA 0 A_SpawnProjectile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
 			TNT1 A 0 A_CountDown;
 			Loop;
 		Death:
-			TNT1 A 0 A_CustomMissile("DarkVortexProj", 0, 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
+			TNT1 A 0 A_SpawnProjectile("DarkVortexProj", 0, 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
 			Stop;
 	}
 }
@@ -169,7 +169,7 @@ class DarkVortexProj : Actor {
 	states {
 		Spawn: 
 			DVRT AB 2;
-			TNT1 AA 0 A_CustomMissile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
+			TNT1 AA 0 A_SpawnProjectile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
 			DVRT C 2	 ;
 			TNT1 A 0 A_Explode(6,75,0,1,75);
 			TNT1 A 0 A_RadiusThrust(-500,60,2);
@@ -178,7 +178,7 @@ class DarkVortexProj : Actor {
 			TNT1 A 0 A_PlaySound("gem/dark/vortex",5,2,1);
 			TNT1 A 0 A_Explode(6,75,0,1,75);
 			TNT1 A 0 A_RadiusThrust(-500,60,2);
-			TNT1 AA 0 A_CustomMissile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
+			TNT1 AA 0 A_SpawnProjectile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
 			TNT1 A 0 A_CountDown;
 			Loop;
 		Death:
@@ -206,14 +206,14 @@ class DarkVortexProjDrop : Actor {
 	states {
 		Spawn: 
 			DVRT ABC 2 ThrustThingZ(0,-8,0,0);
-			TNT1 AA 0 A_CustomMissile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
+			TNT1 AA 0 A_SpawnProjectile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
 			TNT1 A 0 A_Explode(6,75,0,1,90);
 			TNT1 A 0 A_RadiusThrust(-500,60,2);
 			DVRT ABC 2 ThrustThingZ(0,-8,0,0);
 			TNT1 A 0 A_PlaySound("gem/dark/vortex",5,2,1);
 			TNT1 A 0 A_Explode(6,75,0,1,90);
 			TNT1 A 0 A_RadiusThrust(-500,60,2);
-			TNT1 AA 0 A_CustomMissile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
+			TNT1 AA 0 A_SpawnProjectile("DarkVortexProjSmall", random(-5,10), 0, random(0,360), CMF_AIMDIRECTION, random(-5,18));
 			Loop;
 		Death:
 			TNT1 A 0 A_SpawnItem("DarkVortexNova",0,0,0);
@@ -359,43 +359,43 @@ class GemDarkOrb : Actor {
 			TNT1 A 0 A_PlaySound("gem/dark/orb",5,1.6,0);
 		Death:
 			TNT1 A 0;
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 0, CMF_AIMDIRECTION);  //This ring FX method used instead of user variables;
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 10, CMF_AIMDIRECTION); //to prevent heavy lag.;
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 20, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 30, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 40, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 50, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 60, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 70, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 80, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 90, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 100, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 110, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 120, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 130, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 140, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 150, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 160, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 170, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 180, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 190, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 200, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 210, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 220, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 230, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 240, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 250, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 260, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 270, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 280, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 290, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 300, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 310, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 320, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 330, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 340, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 350, CMF_AIMDIRECTION);
-			TNT1 A 0 A_CustomMissile("DarkEnergyBolt", 0, 0, 360, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 0, CMF_AIMDIRECTION);  //This ring FX method used instead of user variables;
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 10, CMF_AIMDIRECTION); //to prevent heavy lag.;
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 20, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 30, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 40, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 50, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 60, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 70, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 80, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 90, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 100, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 110, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 120, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 130, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 140, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 150, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 160, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 170, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 180, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 190, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 200, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 210, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 220, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 230, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 240, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 250, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 260, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 270, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 280, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 290, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 300, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 310, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 320, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 330, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 340, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 350, CMF_AIMDIRECTION);
+			TNT1 A 0 A_SpawnProjectile("DarkEnergyBolt", 0, 0, 360, CMF_AIMDIRECTION);
 			Stop;
 	}
 }
