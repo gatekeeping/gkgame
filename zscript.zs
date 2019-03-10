@@ -8,6 +8,7 @@ version "3.8"
 #include "zscript/weapon/hatchet.zs"
 #include "zscript/weapon/pole.zs"
 #include "zscript/weapon/fists.zs"
+#include "zscript/weapon/battleaxe.zs"
 
 #include "zscript/items/gems/general.zs"
 #include "zscript/items/gems/fire.zs"
