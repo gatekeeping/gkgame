@@ -1,6 +1,7 @@
 version "3.8"
 
 #include "zscript/states/stopmove.zs"
+#include "zscript/states/timeout.zs"
 
 #include "zscript/player/player.zs"
 
@@ -10,6 +11,9 @@ version "3.8"
 #include "zscript/weapon/pole.zs"
 #include "zscript/weapon/fists.zs"
 #include "zscript/weapon/battleaxe.zs"
+
+#include "zscript/magic/base.zs"
+#include "zscript/magic/firetrail.zs"
 
 #include "zscript/items/gems/general.zs"
 #include "zscript/items/gems/fire.zs"
