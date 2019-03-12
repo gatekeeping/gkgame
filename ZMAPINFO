@@ -1,5 +1,6 @@
 GameInfo {
 	PlayerClasses = "GKPlayer"
+	EventHandlers = "GK_Events"
 }
 
 cluster 1 { hub }

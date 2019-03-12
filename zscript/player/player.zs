@@ -34,6 +34,7 @@ class GKPlayer : PlayerPawn {
 
 	// Temp
 	override void BeginPlay() {
+		super.beginPlay();
 		currentSpell = new("FireTrail");
 	}
 }
