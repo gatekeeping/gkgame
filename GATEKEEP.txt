@@ -2,6 +2,7 @@ defaultmap {
 	ZoneSize = 4096  // Size of each edge of a zone.
 	PlayfieldSize = 128 // Size of playfield grid on each axis.
 	GatewayLines = 15 // Max portals in a gateway. Must be odd.
+	StrictPlacement = true // prevents unlinked gateways bordering each other
 }
 
 map MAP01 {
