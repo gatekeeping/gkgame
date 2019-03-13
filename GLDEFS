@@ -414,10 +414,10 @@ object GemLightShockwave {
 
 pulseLight BlueCandle {
 	color 0.0 0.0 0.8
-	size 32
-	secondarySize 24
+	size 64
+	secondarySize 56
 	interval 1
-	offset 0 0 0
+	offset 0 32 0
 }
 
 object ZBlueCandle {
@@ -432,14 +432,20 @@ object ZBlueCandle {
 
 pulseLight Torch {
 	color 1.0 0.4 0.0
-	size 64
-	secondarySize 56
-	interval 1
+	size 150
+	secondarySize 110
+	interval 10
 	offset 0 0 0
 }
 
-object BrassTorch {
-	frame BRTR {
-		light Torch
-	}
-}
+object BrassTorch { frame BRTR { light Torch } }
+object ZCauldron { frame CDRN { light Torch	} }
+object ZCandle { frame CNDL { light Torch } }
+object ZChandelier { frame CDLR { light Torch } }
+object FlameLarge { frame FFLG { light Torch } }
+object FlameLargeTemp { frame FFLG { light Torch } }
+object ZFireBull { frame FBUL { light Torch } }
+object FireThing { frame FSKL { light Torch } }
+object FlameSmall { frame FFSM { light Torch } }
+object ZTwinedTorch { frame TWTR { light Torch } }
+object ZWallTorch { frame WLTR { light Torch } }
