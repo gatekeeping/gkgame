@@ -6,8 +6,24 @@ GameInfo {
 cluster 1 { hub }
 
 map MAP01 lookup "map01" {
-	sky1 = "SKY1", 0
 	cluster = 1
+	sky1 = "SKY1", 0
 }
 
-DoomEdNums {}
+map MAP02 lookup "map02" {
+	cluster = 1
+	sky1 = "GK_SKY1", 0.01
+	fade = "00 00 01"
+	outsidefog = "88 88 99"
+	fogdensity = 200
+	outsidefogdensity = 100
+	skyfog = 100
+}
+
+DoomEdNums {
+
+	22701 = BrownStalactiteLarge
+	22702 = BrownStalactiteMedium
+	22703 = BrownStalactiteSmall
+
+}
