@@ -26,5 +26,7 @@ version "3.8"
 #include "zscript/items/gems/dark.zs"
 #include "zscript/items/gems/light.zs"
 
+#include "zscript/monsters/gkmonster.zs"
+#include "zscript/monsters/ettin.zs"
 
 #include "zscript/props/cave.zs"
