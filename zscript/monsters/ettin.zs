@@ -25,10 +25,16 @@ class GKEttin : GKMonster replaces Ettin {
 	States
 	{
 	Spawn:
-		ETTN AA 10 A_Look;
+		ETTN AA 10 A_LookEx(0, minSeeDist(), maxSeeDist(), maxHearDist(), fov());
 		Loop;
 	See:
 		ETTN ABCD 5 A_Chase;
+		Loop;
+	Wander:
+		ETTN ABCD 5 {
+			A_Wander();
+			A_LookEx(0, minSeeDist(), maxSeeDist(), maxHearDist(), fov());
+		}
 		Loop;
 	Pain:
 		ETTN H 7 A_Pain;
@@ -51,8 +57,16 @@ class GKEttin : GKMonster replaces Ettin {
 		Wait;
 	}
 
-	override int forgetTicks() {
-		return 15*35;
+	override int forgetSeconds() {
+		return 30;
+	}
+
+	override float maxSeeDist() {
+		return 2048.0;
+	}
+
+	override float maxHearDist() {
+		return 2048.0;
 	}
 
 }

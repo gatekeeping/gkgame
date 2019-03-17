@@ -2,33 +2,54 @@
 class GKMonster : Actor {
 
 	private int forgetTimer;
-	private Vector2 spawnPosition;
+	private int randomForget;
+
+	override void PostBeginPlay() {
+		randomForget = random(1, 30);
+	}
 
 	override void Tick() {
-		if(target && forgetTimer < forgetTicks() && CheckSight(target)) {
-			forgetTimer = forgetTicks();
-			console.printf("Timer set: %i", forgetTimer);
-		}
-		else if (target && forgetTimer && !CheckSight(target)) {
-			forgetTimer--;
-			if (!forgetTimer) {
-				console.printf("Lose Target: %i", forgetTimer);
-				A_ClearTarget();
-				TryMove(spawnPosition, 0);
+		if (canForget() && gametic % 35) {
+			if(target && forgetTimer < forgetCalc() && CheckSight(target)) {
+				forgetTimer = forgetCalc();
+			}
+			else if (target && forgetTimer && !CheckSight(target)) {
+				forgetTimer--;
+				if (!forgetTimer) {
+					A_ClearTarget();
+					SetState(FindState("Wander"));
+				}
 			}
 		}
 		super.Tick();
 	}
 
-	override void PostBeginPlay() {
-		spawnPosition = (self.pos.X, self.pos.Y);
+	int forgetCalc() {
+		return (forgetSeconds() + randomForget);
 	}
 
-	virtual int forgetTicks() {
+	virtual int forgetSeconds() {
 		return 0; 
 	}
 
+	virtual float minSeeDist() {
+		return 0.0;
+	}
 
+	virtual float maxSeeDist() {
+		return 0.0;
+	}
 
+	virtual float maxHearDist() {
+		return 0.0;
+	}
+
+	virtual double fov() {
+		return 160.0;
+	}
+
+	virtual bool canForget() {
+		return true;
+	}
 
 }
